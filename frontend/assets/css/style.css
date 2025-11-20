@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Monomakh', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #222;
+}
+
+/* CONTAINER SECTION */
+.container {
+  max-width: 900px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f7f7f9;
+  padding: 24px 24px;
+  display: grid;
+  min-height: 50vh;
+  margin: 40px auto;
+  grid-template-rows: 20% 15% 20% 35% 10%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+/* HEADER SECTION */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #0b3d91;
+}
+
+header {
+  color: #fff;
+  padding: 24px;
+}
+header h1 {
+  margin: 0 0 8px;
+  font-weight: 700;   /* bold for strong title */
+  font-size: 1.8rem;
+}
+
+/* INPUT CONTROLS SECTION */
+.card-input {
+  justify-items: center;
+}
+
+.card-input .controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 16px;
+  width: 80%;
+}
+.controls input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+
+}
+
+.card-input .controls input::placeholder {
+  font-weight: bold;
+}
+.controls button {
+  padding: 8px 12px;
+  background: #0b3d91;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.controls #status {
+  font-size: 12px;
+  color: #555;
+}
+
+/* RESULTS SECTION */
+.results,
+.chart {
+  padding: 16px;
+}
+.results h2 {
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+tr:hover {
+  background: #f0f4ff;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.badge.positive {
+  background: #d1fae5;
+  color: #065f46;
+}
+.badge.neutral {
+  background: #e5e7eb;
+  color: #374151;
+}
+.badge.negative {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+/* CHART SECTION */
+.chart h2 {
+  text-align: center;
+}
+
+/* FOOTER SECTION */
+.card-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  font-weight: 300;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .container {
+    width: 1000px;
+    grid-template-rows: 20% 20% 20% 30% 10%;
+  }
+
+}

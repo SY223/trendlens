@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fintech News Sentiment Analyzer</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monomakh&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card card-header">
+        <header>
+          <h1>Fintech News Sentiment Analyzer</h1>
+          <p>Filter fintech headlines, analyze sentiment, and track trends.</p>
+        </header>
+      </div>
+
+      <div class="card card-input">
+        <section class="controls">
+          <input
+            id="query"
+            type="text"
+            placeholder="Keyword (e.g., Stripe, Bitcoin)"
+          />
+          <button id="fetchBtn">Fetch & Analyze</button>
+          <span id="status"></span>
+        </section>
+      </div>
+
+      <div class="card card-results">
+        <section class="results">
+          <h2>Headlines</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Sentiment</th>
+                <th>Confidence</th>
+                <th>Title</th>
+                <th>Source</th>
+                <th>Published</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+          </table>
+        </section>
+      </div>
+
+      <div class="card card-chart">
+        <section class="chart">
+          <h2>Sentiment distribution</h2>
+          <canvas id="sentimentChart" width="400" height="200"></canvas>
+        </section>
+      </div>
+
+      <div class="card card-footer">
+        <footer>
+          <small>Built with FastAPI + FinBERT</small>
+        </footer>
+      </div>
+
+      <script src="./assets/js/script.js"></script>
+    </div>
+  </body>
+</html>
